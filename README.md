@@ -1,5 +1,4 @@
-# clean_architecture_flutter_beguinner
-
+# clean_architecture_flutter
 A new Flutter project.
 
 ## Getting Started
