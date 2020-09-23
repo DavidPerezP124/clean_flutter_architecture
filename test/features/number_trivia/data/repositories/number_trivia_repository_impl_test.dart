@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:clean_architecture_flutter_beguinner/core/error/exceptions.dart';
 import 'package:clean_architecture_flutter_beguinner/core/error/failures.dart';
 import 'package:clean_architecture_flutter_beguinner/core/network/network_info.dart';
