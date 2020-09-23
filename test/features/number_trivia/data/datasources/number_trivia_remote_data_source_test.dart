@@ -28,13 +28,13 @@ the EndPoint and with application/json being the header''',
       () async {
         // arrange
         when(mockHttpClient.get(any, headers: anyNamed('headers'))).thenAnswer(
-            (_) async =>
-                http.Response(fixture('trivia.json'), 200));
+            (_) async => http.Response(fixture('trivia.json'), 200));
 
         // act
         await dataSource.getConcreteNumberTrivia(tNumber);
         // assert
-        verify(mockHttpClient.get(URL_ENDPOINT + '$tNumber', headers: URL_HEADERS}));
+        verify(mockHttpClient.get(URL_ENDPOINT + '$tNumber',
+            headers: URL_HEADERS));
       },
     );
   });
