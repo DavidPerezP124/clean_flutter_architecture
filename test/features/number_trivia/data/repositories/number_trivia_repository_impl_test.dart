@@ -2,7 +2,7 @@ import 'dart:ffi';
 
 import 'package:clean_architecture_flutter_beguinner/core/error/exceptions.dart';
 import 'package:clean_architecture_flutter_beguinner/core/error/failures.dart';
-import 'package:clean_architecture_flutter_beguinner/core/platform/network_info.dart';
+import 'package:clean_architecture_flutter_beguinner/core/network/network_info.dart';
 import 'package:clean_architecture_flutter_beguinner/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:clean_architecture_flutter_beguinner/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 import 'package:clean_architecture_flutter_beguinner/features/number_trivia/data/models/number_trivia_model.dart';
@@ -46,7 +46,7 @@ void main() {
   }
 
   void runTestsOffline(Function body) {
-    group('device is online', () {
+    group('device is offline', () {
       setUp(() {
         when(mockNetworkInfo.isConnected).thenAnswer((_) async => false);
       });
