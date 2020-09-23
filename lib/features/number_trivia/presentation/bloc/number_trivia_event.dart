@@ -1,3 +1,8 @@
 part of 'number_trivia_bloc.dart';
-@immutable
-abstract class NumberTriviaEvent {}
+
+abstract class NumberTriviaEvent extends Equatable {
+  const NumberTriviaEvent();
+
+  @override
+  List<Object> get props => [];
+}
