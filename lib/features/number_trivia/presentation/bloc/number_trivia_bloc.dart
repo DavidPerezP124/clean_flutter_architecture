@@ -7,7 +7,7 @@ part 'number_trivia_event.dart';
 part 'number_trivia_state.dart';
 
 class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
-  NumberTriviaBloc() : super(NumberTriviaInitial());
+  NumberTriviaBloc();
 
   @override
   Stream<NumberTriviaState> mapEventToState(
@@ -15,4 +15,8 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
   ) async* {
     // TODO: implement mapEventToState
   }
+
+  @override
+  // TODO: implement initialState
+  NumberTriviaState get initialState => throw UnimplementedError();
 }
