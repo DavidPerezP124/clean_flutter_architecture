@@ -25,5 +25,4 @@ jobs:
     - run: flutter doctor
     - run: flutter pub get
     - run: pwd ; ls
-    - run: snap install tree && tree 
     - run: flutter test
