@@ -3,11 +3,10 @@ import 'dart:convert';
 import 'package:clean_architecture_flutter_beguinner/core/error/exceptions.dart';
 import 'package:clean_architecture_flutter_beguinner/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:clean_architecture_flutter_beguinner/features/number_trivia/data/models/number_trivia_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:matcher/matcher.dart';
 import '../../../../core/fixtures/fixture_reader.dart';
 
 class MockSharedPreferences extends Mock implements SharedPreferences {}
@@ -50,7 +49,7 @@ void main() {
         final call = dataSource.getLastNumberTrivia;
         // assert
 
-        expect(() => call(), throwsA(isInstanceOf<CacheException>()));
+        expect(() => call(), throwsA(TypeMatcher<CacheException>()));
       },
     );
   });
