@@ -21,7 +21,7 @@ class NumberTriviaPage extends StatelessWidget {
   BlocProvider<NumberTriviaBloc> _buildBody() {
     final _children = [
       TopWidget(),
-      bottomWidget(),
+      BottomWidget(),
     ];
     var _flexibleChildren = _children
         .map((e) => Expanded(
