@@ -11,7 +11,6 @@ class GetTriviaForConcreteNumber extends NumberTriviaEvent {
 }
 
 class GetTriviaForRandomNumber extends NumberTriviaEvent {
-  final String numberString;
 
-  GetTriviaForRandomNumber(this.numberString) : super([numberString]);
+  GetTriviaForRandomNumber();
 }
